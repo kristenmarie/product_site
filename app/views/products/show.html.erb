@@ -6,15 +6,18 @@
 <h4>Reviews:</h4>
 
 <% @product.reviews.each do |review| %>
-  <div class="review">
-    <strong> <%= review.author %> | Rating: <%= review.rating %> </strong>
-    <p> <%= review.content_body %> </p>
+  <div class="review panel panel-default">
+    <div class="panel-heading">
+      <strong> <%= review.author %> | Rating: <%= review.rating %> </strong>
+    </div>
+    <div class="panel-body">
+      <p> <%= review.content_body %> </p>
+    </div>
   </div>
 <% end %>
 
-<%= link_to "Add Review", new_product_review_path(@product) %>
-
-
-<%= link_to "Delete", product_path(@product),
+<p><%= link_to "Add Review", new_product_review_path(@product) %></p>
+<hr>
+<button class="btn btn-danger"><%= link_to "Delete", product_path(@product),
                                :data => {:confirm => "Are you sure?",
-                                              :method => "delete"} %>
+                                              :method => "delete"} %></button>

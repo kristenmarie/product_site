@@ -2,6 +2,6 @@
 
 <ul>
   <% @products.each do |product| %>
-    <li>  <%= link_to product.name, product_path(product) %> | <%= link_to "Edit", edit_product_path(product) %> </li>
+    <li><%= link_to product.name, product_path(product), class: 'product' %> | <button class="btn btn-success"><%= link_to "Edit", edit_product_path(product) %></button> </li>
   <% end %>
 </ul>
