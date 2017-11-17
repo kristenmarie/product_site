@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProductSite</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+           <%= link_to "Mario's foods", root_path, class: "navbar-brand" %>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li> <%= link_to "Animals", animals_path %> </li>
+          <li> <%= link_to "Regions", regions_path %> </li>
+          <li> <%= link_to "Sightings", sightings_path %> </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <% if flash[:notice] != nil %>
+        <div class="alert alert-success">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+    <%= yield %>
+  </body>
+</html>
