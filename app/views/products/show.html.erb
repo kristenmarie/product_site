@@ -3,6 +3,17 @@
 <h3>Cost: <%= @product.cost %> </h3>
 <h3>Country of Origin: <%= @product.origin %> </h3>
 
+<h4>Reviews:</h4>
+
+<% @product.reviews.each do |review| %>
+  <div class="review">
+    <strong> <%= review.author %> | Rating: <%= review.rating %> </strong>
+    <p> <%= review.content_body %> </p>
+  </div>
+<% end %>
+
+<%= link_to "Add Review", new_product_review_path(@product) %>
+
 
 <%= link_to "Delete", product_path(@product),
                                :data => {:confirm => "Are you sure?",
