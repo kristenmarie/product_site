@@ -19,7 +19,6 @@ This simple web application allows admin users to add, update and delete product
 ## Setup/Installation Requirements
 * Clone this repository
 * In terminal, navigate to this projects root directory (product_site)
-* Ensure you have [Node.js](https://nodejs.org/en/), [Gulp](https://gulpjs.com), and [TypeScript](https://www.typescriptlang.org) installed
 * In terminal (while still in root directory), enter the following commands:
   * ``` $ bundle install ```
   * ``` $ rails db:setup ```
