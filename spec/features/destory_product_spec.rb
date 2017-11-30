@@ -9,7 +9,7 @@ describe "the destroy product process" do
     fill_in 'Origin', :with => 'USA'
     click_on 'Create Product'
     click_on 'Saucy Sauce'
-    click_on 'Delete'
+    click_link 'Delete'
     expect(page).to have_no_content 'Saucy Sauce'
   end
 end

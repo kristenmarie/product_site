@@ -8,7 +8,8 @@ describe "the edit product process" do
     fill_in 'Cost', :with => 5
     fill_in 'Origin', :with => 'USA'
     click_on 'Create Product'
-    click_on 'Edit'
+    click_on 'Saucy Sauce'
+    click_link 'Edit'
     expect(page).to have_content 'Edit'
   end
 end
