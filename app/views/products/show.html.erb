@@ -8,7 +8,7 @@
 <% @product.reviews.each do |review| %>
   <div class="review panel panel-default">
     <div class="panel-heading">
-      <strong> <%= review.author %> | Rating: <%= review.rating %> </strong>
+      <strong> <%= review.author %> | Rating: <%= review.rating %> | <button class="btn btn-success"><%= link_to "Edit", edit_product_review_path(@product, review) %></button> </strong>
     </div>
     <div class="panel-body">
       <p> <%= review.content_body %> </p>
