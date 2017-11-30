@@ -1,7 +1,4 @@
-<h1>Welcome to Mario's Foods!</h1>
-
-<!-- Add an if so if URL is /products it will display all products and then and else statement
-to only show the products in the scope/everything that should be on the landing page -->
+<h1>All of Our Products!</h1>
 <ul>
   <% @products.each do |product| %>
     <li><%= link_to product.name, product_path(product), class: 'product' %> </li>

@@ -6,6 +6,10 @@ a {
   color: white;
 }
 
+h4 {
+  color: black;
+}
+
 a:hover {
   color: white;
   text-decoration: none;
@@ -21,4 +25,9 @@ a:hover {
 
 .review {
   max-width: 50%;
+}
+
+.btn {
+  background-color: green;
+  color: white;
 }

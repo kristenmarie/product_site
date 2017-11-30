@@ -1,0 +1,48 @@
+<h1>Welcome to Mario's Foods!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="product-panel panel panel-default">
+        <div class="panel-heading">
+          <h3>Most Reviewed Product</h3>
+        </div>
+        <div class="panel-body">
+          <% if @most_reviewed %>
+            <h4> <%= link_to @most_reviewed.name, product_path(@most_reviewed), class: 'product' %> </h4>
+          <% else %>
+          <h4>There currently isn't a most reviewed product.</h4>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="product-panel panel panel-default">
+        <div class="panel-heading">
+          <h3>Recently Added</h3>
+        </div>
+        <div class="panel-body">
+          <% @recent_products.each do |product| %>
+            <h4><%= link_to product.name, product_path(product), class: 'product' %></h4>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="product-panel panel panel-default">
+        <div class="panel-heading">
+          <h3>Made in the USA!</h3>
+        </div>
+        <div class="panel-body">
+          <% if @usa_made.any? %>
+            <% @usa_made.each do |product| %>
+              <h4><%= link_to product.name, product_path(product), class: 'product' %></h4>
+            <% end %>
+          <% else %>
+            <h4>We currently do not carry any products made in the USA.</h4>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

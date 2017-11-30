@@ -1,5 +1,11 @@
 class ProductsController < ApplicationController
 
+  def home
+    @most_reviewed = Product.most_reviews
+    @usa_made = Product.made_in_usa
+    @recent_products = Product.recently_added
+  end
+
   def index
     @products = Product.all
   end
