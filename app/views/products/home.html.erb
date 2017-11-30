@@ -1,4 +1,6 @@
-<h1>Welcome to Mario's Foods!</h1>
+<div class="welcome">
+  <h1>Welcome to Mario's Foods!</h1>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-md-4">
@@ -23,6 +25,7 @@
         <div class="panel-body">
           <% @recent_products.each do |product| %>
             <h4><%= link_to product.name, product_path(product), class: 'product' %></h4>
+            <hr>
           <% end %>
         </div>
       </div>

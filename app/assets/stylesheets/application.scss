@@ -1,6 +1,11 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yeseva+One');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 
 a {
   color: white;
@@ -8,6 +13,10 @@ a {
 
 h4 {
   color: black;
+}
+
+h1 {
+  font-family: 'Yeseva One', cursive;
 }
 
 a:hover {
@@ -38,4 +47,45 @@ a:hover {
 
 .delete-button {
   background-color: #e23838;
+}
+
+.container-fluid {
+  background-color: #2F3061;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.navbar-default .navbar-brand {
+  font-family: 'Yeseva One', cursive;
+  color: white;
+  font-size: 25px;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #D3D3D3
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: 'Yeseva One', cursive;
+  color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #D3D3D3
+}
+
+.panel-default > .panel-heading {
+  background-color: #A00A04;
+  color: white;
+}
+
+.row {
+  text-align: center;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 30px;
 }
